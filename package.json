@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node -e \"const fs=require('fs'); fs.mkdirSync('./public/assets', {recursive:true}); fs.cpSync('./assets/photos', './public/assets/photos', {recursive:true}); fs.cpSync('./assets/music', './public/assets/music', {recursive:true});\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "postprocessing": "^6.39.2",
+    "three": "^0.185.0",
+    "three-stdlib": "^2.36.1"
+  },
+  "devDependencies": {
+    "vite": "^8.1.1"
+  }
+}

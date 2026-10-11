@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Journey For Sneha ❤️</title>
+  <meta name="theme-color" content="#130b1c">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+  <meta property="og:title" content="A Journey For Sneha ❤️">
+  <meta property="og:description" content="A little secret made especially for you ✨">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="loadingScreen" class="passcode-screen">
+
+    <div class="passcode-sparkles" aria-hidden="true">
+      <span>★</span>
+      <span>♥</span>
+      <span>★</span>
+      <span>♥</span>
+      <span>★</span>
+      <span>♥</span>
+    </div>
+  
+    <div class="passcode-layout">
+  
+      <!-- LEFT PHOTO SIDE -->
+      <section class="passcode-photo-side">
+  
+        <p class="passcode-photo-kicker">A LITTLE JOURNEY FOR</p>
+        <h1>Sneha <span>♥</span></h1>
+  
+        <div class="passcode-portrait-frame">
+  
+          <div class="portrait-hearts" aria-hidden="true">
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+            <span>♥</span>
+          </div>
+  
+          <!-- Sneha's portrait photograph -->
+          <div class="passcode-photo-display">
+            <img src="./assets/photos/photo1.jpeg" alt="Sneha" class="passcode-main-photo" data-caption="A special birthday journey created for Sneha ✨" />
+          </div>
+  
+        </div>
+  
+        <p class="passcode-photo-message">
+          A small secret made especially for you.
+        </p>
+  
+      </section>
+  
+      <!-- RIGHT PASSCODE SIDE -->
+      <section class="passcode-card">
+  
+        <p class="passcode-kicker">ONLY YOU CAN UNLOCK THIS</p>
+  
+        <div class="passcode-heart">♥</div>
+  
+        <h2>Enter a passcode</h2>
+  
+        <p class="passcode-hint">
+          Hint: the year you were born
+        </p>
+  
+        <div
+          class="passcode-display"
+          id="passcodeDisplay"
+          aria-label="Four digit passcode"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+  
+        <p id="passcodeStatus" class="passcode-status">
+          Four little hearts unlock your journey.
+        </p>
+  
+        <div class="passcode-keypad" id="passcodeKeypad">
+  
+          <button data-digit="1" type="button">1</button>
+          <button data-digit="2" type="button">2</button>
+          <button data-digit="3" type="button">3</button>
+  
+          <button data-digit="4" type="button">4</button>
+          <button data-digit="5" type="button">5</button>
+          <button data-digit="6" type="button">6</button>
+  
+          <button data-digit="7" type="button">7</button>
+          <button data-digit="8" type="button">8</button>
+          <button data-digit="9" type="button">9</button>
+  
+          <button
+            class="passcode-clear"
+            data-action="delete"
+            type="button"
+            aria-label="Delete last digit"
+          >
+            ⌫
+          </button>
+  
+          <button data-digit="0" type="button">0</button>
+  
+          <span class="keypad-heart" aria-hidden="true">♥</span>
+  
+        </div>
+  
+      </section>
+  
+    </div>
+  
+  </div>
+
+  <canvas id="space"></canvas>
+
+  <section id="cakeBackdrop" aria-hidden="true">
+    <div class="cake-frame"></div>
+
+    <div class="cake-bunting cake-bunting--left">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="cake-bunting cake-bunting--right">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="cake-star cake-star--left">★</div>
+    <div class="cake-spark cake-spark--one">✦</div>
+    <div class="cake-spark cake-spark--two">✧</div>
+
+    <div class="cake-hearts cake-hearts--left">♡<br>♡<br>♡</div>
+    <div class="cake-hearts cake-hearts--right">♡<br>♡<br>♡</div>
+
+    <div class="bat-party">
+      <div class="bat-ears"></div>
+      <div class="bat-head">
+        <span class="bat-eye bat-eye--left"></span>
+        <span class="bat-eye bat-eye--right"></span>
+      </div>
+      <div class="bat-body"></div>
+      <div class="bat-cape"></div>
+      <div class="party-hat"></div>
+    </div>
+
+    <div class="party-globe">
+      <div class="globe-cap"></div>
+      <div class="globe-ball"></div>
+      <div class="globe-stars">✦ ✦</div>
+    </div>
+
+    <div class="cake-ribbon cake-ribbon--left"></div>
+    <div class="cake-ribbon cake-ribbon--right"></div>
+
+    <div class="cake-balloons" aria-hidden="true">
+      <i class="cake-balloon cake-balloon--1"></i>
+      <i class="cake-balloon cake-balloon--2"></i>
+      <i class="cake-balloon cake-balloon--3"></i>
+      <i class="cake-balloon cake-balloon--4"></i>
+    </div>
+
+    <div class="cake-magic" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </section>
+
+  <div id="overlay">
+    <p class="topText">Every star in the universe celebrates you today.</p>
+    <h1>SNEHA</h1>
+    <div class="line"></div>
+    <p class="bottomText">Welcome to your special day</p>
+    <button id="beginBtn" type="button">Begin The Journey →</button>
+  </div>
+
+  <div id="cakeInstruction">
+    <p>Happy Birthday</p>
+    <strong>Sneha</strong>
+    <span>Make a wish — click the cake</span>
+  </div>
+
+  <div id="celebrationLayer" aria-hidden="true">
+    <div id="balloonsLayer"></div>
+    <div id="crackersLayer"></div>
+    <div id="celebrationMessage"></div>
+  </div>
+
+  <section id="memoriesSection"></section>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

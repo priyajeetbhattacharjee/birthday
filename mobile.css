@@ -1,0 +1,1038 @@
+/* =========================================================
+   COMPLETE MOBILE EXPERIENCE
+   Load this file after style.css.
+   ========================================================= */
+
+   @media (max-width: 768px) {
+    :root {
+      --mobile-gutter: 20px;
+    }
+  
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      min-height: 100svh;
+      overscroll-behavior: none;
+    }
+  
+    button {
+      min-height: 44px;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+  
+    #space {
+      width: 100vw;
+      height: 100svh;
+    }
+  
+    /* ---------------- PASSCODE ---------------- */
+  
+    #loadingScreen.passcode-screen {
+      min-height: 100svh;
+      padding:
+        max(16px, env(safe-area-inset-top))
+        16px
+        max(16px, env(safe-area-inset-bottom));
+    }
+  
+    .passcode-card {
+      width: min(100%, 370px);
+      max-height: calc(100svh - 32px);
+      padding: 27px 22px 23px;
+      border-radius: 24px;
+      overflow-y: auto;
+    }
+  
+    .passcode-kicker {
+      margin-bottom: 9px;
+      font-size: 10px;
+      letter-spacing: 4px;
+    }
+  
+    .passcode-moon {
+      width: 54px;
+      height: 54px;
+      margin-bottom: 13px;
+      font-size: 23px;
+    }
+  
+    .passcode-card h2 {
+      font-size: clamp(26px, 8vw, 33px);
+    }
+  
+    .passcode-hint {
+      margin: 8px 0 18px;
+      font-size: 13px;
+    }
+  
+    .passcode-display {
+      gap: 9px;
+      margin-bottom: 12px;
+    }
+  
+    .passcode-display span {
+      width: 37px;
+      height: 43px;
+    }
+  
+    .passcode-status {
+      margin-bottom: 13px;
+      font-size: 11px;
+    }
+  
+    .passcode-keypad {
+      gap: 8px;
+    }
+  
+    .passcode-keypad button,
+    .passcode-keypad span {
+      min-height: 44px;
+    }
+  
+    .passcode-orbit--one {
+      left: -530px;
+    }
+  
+    .passcode-orbit--two {
+      right: -470px;
+    }
+  
+    /* ---------------- UNIVERSE OPENING ---------------- */
+  
+    #overlay {
+      justify-content: center;
+      padding:
+        max(28px, env(safe-area-inset-top))
+        var(--mobile-gutter)
+        max(28px, env(safe-area-inset-bottom));
+    }
+  
+    #overlay::before {
+      width: 140vw;
+      height: 140vw;
+    }
+  
+    #overlay .topText {
+      width: min(92vw, 360px);
+      margin-bottom: 17px;
+      font-size: clamp(14px, 4.2vw, 17px);
+      line-height: 1.55;
+    }
+  
+    #overlay h1 {
+      max-width: 100%;
+      font-size: clamp(50px, 17vw, 76px);
+      letter-spacing: 7px;
+      line-height: 1.05;
+    }
+  
+    #overlay .line {
+      width: 112px;
+      margin: 21px 0;
+    }
+  
+    #overlay .bottomText {
+      margin-bottom: 31px;
+      font-size: clamp(16px, 4.8vw, 20px);
+      line-height: 1.45;
+    }
+  
+    #beginBtn {
+      width: min(84vw, 320px);
+      padding: 14px 18px;
+      font-size: 15px;
+      letter-spacing: 1.4px;
+    }
+  
+    /* ---------------- CAKE PAGE ---------------- */
+  
+    #cakeBackdrop {
+      min-height: 100svh;
+      background-size:
+        100% 100%,
+        25px 25px,
+        25px 25px;
+    }
+  
+    .cake-frame {
+      inset: 7px;
+      border-width: 2px;
+      border-radius: 20px;
+    }
+  
+    body.cake-moment #cakeInstruction {
+      top: max(4.5svh, 30px);
+      width: calc(100vw - 34px);
+      padding-inline: 8px;
+    }
+  
+    body.cake-moment #cakeInstruction p {
+      font-size: clamp(42px, 15vw, 66px);
+      line-height: 0.92;
+    }
+  
+    body.cake-moment #cakeInstruction strong {
+      margin-top: 9px;
+      font-size: 13px;
+      letter-spacing: 8px;
+    }
+  
+    body.cake-moment #cakeInstruction span {
+      margin-top: 13px;
+      padding: 8px 12px;
+      font-size: 9px;
+      letter-spacing: 1.2px;
+    }
+  
+    .cake-bunting {
+      top: 12%;
+      width: 55%;
+      height: 105px;
+      border-top-width: 2px;
+    }
+  
+    .cake-bunting span {
+      width: 22px;
+      height: 29px;
+      border-width: 2px;
+    }
+  
+    .cake-star--left,
+    .cake-hearts,
+    .cake-ribbon,
+    .cake-balloon--3,
+    .cake-balloon--4 {
+      display: none;
+    }
+  
+    .cake-spark--one {
+      top: 36%;
+      left: 12%;
+      font-size: 32px;
+    }
+  
+    .cake-spark--two {
+      top: 38%;
+      right: 11%;
+      font-size: 30px;
+    }
+  
+    .bat-party {
+      left: 2%;
+      bottom: 3%;
+      scale: 0.55;
+      transform-origin: bottom left;
+    }
+  
+    .party-globe {
+      right: 2%;
+      bottom: 3%;
+      scale: 0.5;
+      transform-origin: bottom right;
+    }
+  
+    .cake-balloon--1 {
+      left: 5%;
+      top: 45%;
+      scale: 0.62;
+    }
+  
+    .cake-balloon--2 {
+      right: 5%;
+      top: 44%;
+      scale: 0.62;
+    }
+  
+    .cake-magic i:nth-child(n + 10) {
+      display: none;
+    }
+  
+    .cake-confetti-piece {
+      width: 7px;
+      height: 13px;
+      border-width: 1px;
+    }
+  
+    .cake-cracker-burst {
+      font-size: clamp(28px, 9vw, 45px);
+    }
+  
+    .page-turn-transition::after {
+      font-size: clamp(27px, 10vw, 43px);
+    }
+  
+    /* ---------------- MEMORIES ---------------- */
+  
+    #memoriesSection {
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+    }
+  
+    .memories-scene {
+      min-height: 100svh;
+      padding:
+        max(40px, env(safe-area-inset-top))
+        0
+        max(34px, env(safe-area-inset-bottom));
+    }
+  
+    .memories-header {
+      padding: 0 23px;
+    }
+  
+    .memories-kicker {
+      font-size: 10px;
+      letter-spacing: 4px;
+    }
+  
+    .memories-header h1 {
+      font-size: clamp(34px, 11vw, 47px);
+      line-height: 1.08;
+    }
+  
+    .memories-header > p:last-child {
+      max-width: 310px;
+      margin-inline: auto;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+  
+    .polaroid-gallery {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 78vw;
+      justify-content: start;
+      gap: 19px;
+      width: 100%;
+      margin-top: 27px;
+      padding: 14px 11vw 28px;
+      overflow-x: auto;
+      overflow-y: visible;
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: 11vw;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+    }
+  
+    .polaroid-gallery::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .memory-polaroid,
+    .memory-polaroid--1,
+    .memory-polaroid--2,
+    .memory-polaroid--3,
+    .memory-polaroid--4,
+    .memory-polaroid--5 {
+      width: 100%;
+      margin: 0;
+      transform: none !important;
+      scroll-snap-align: center;
+    }
+  
+    .memory-photo {
+      width: 100%;
+      height: min(48svh, 340px);
+    }
+  
+    .memory-polaroid p {
+      margin-top: 12px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+  
+    .memories-note {
+      width: calc(100% - 40px);
+      margin: 3px auto 20px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      text-align: center;
+    }
+  
+    .memories-continue {
+      margin-bottom: 16px;
+      padding: 12px 20px;
+      font-size: 12px;
+    }
+  
+    /* ---------------- LETTER ---------------- */
+  
+    #letterSection {
+      overflow-x: hidden;
+      overscroll-behavior: contain;
+    }
+  
+    .letter-scene {
+      min-height: 100svh;
+      padding:
+        max(35px, env(safe-area-inset-top))
+        18px
+        max(30px, env(safe-area-inset-bottom));
+    }
+  
+    .letter-question {
+      width: 100%;
+      max-width: 390px;
+    }
+  
+    .letter-kicker {
+      margin-bottom: 13px;
+      font-size: 10px;
+      letter-spacing: 4px;
+    }
+  
+    .letter-question h1 {
+      font-size: clamp(32px, 9.5vw, 43px);
+      line-height: 1.2;
+    }
+  
+    .letter-question > p:not(.letter-kicker) {
+      max-width: 320px;
+      margin-inline: auto;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+  
+    .letter-choice {
+      width: 100%;
+      min-height: 120px;
+      gap: 10px;
+      margin-top: 26px;
+    }
+  
+    .letter-choice button {
+      height: 47px;
+      padding-inline: 17px;
+      font-size: 13px;
+    }
+  
+    .letter-reveal {
+      box-sizing: border-box;
+      padding: 16px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+  
+    .envelope {
+      width: 88vw;
+      height: 55vw;
+      min-height: 185px;
+      max-height: 255px;
+    }
+  
+    .love-letter {
+      width: calc(100vw - 28px);
+      min-height: 0;
+      max-height: calc(100svh - 30px);
+      padding: 29px 22px;
+      overflow-y: auto;
+      font-size: 14px;
+      line-height: 1.58;
+    }
+  
+    .letter-date {
+      margin-bottom: 20px;
+      font-size: 10px;
+    }
+  
+    .letter-signoff {
+      margin-top: 21px;
+    }
+  
+    .letter-signoff em {
+      font-size: 18px;
+    }
+  
+    .gift-continue {
+      width: 100%;
+      margin-top: 23px;
+      padding: 11px 14px;
+      font-size: 12px;
+    }
+  
+    /* ---------------- GIFT ---------------- */
+  
+    #giftSection {
+      overflow-x: hidden;
+      overscroll-behavior: contain;
+    }
+  
+    .gift-scene {
+      min-height: 100svh;
+      gap: 62px;
+      padding:
+        max(42px, env(safe-area-inset-top))
+        18px
+        max(38px, env(safe-area-inset-bottom));
+    }
+  
+    .gift-header {
+      width: 100%;
+    }
+  
+    .gift-header p {
+      margin-bottom: 9px;
+      font-size: 9px;
+      letter-spacing: 4px;
+    }
+  
+    .gift-header h1 {
+      font-size: clamp(36px, 11vw, 48px);
+    }
+  
+    .gift-header span {
+      max-width: 310px;
+      margin: 10px auto 0;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  
+    .gift-box {
+      width: min(68vw, 285px);
+    }
+  
+    .gift-box small {
+      bottom: -33px;
+      font-size: 12px;
+    }
+  
+    .gift-reveal {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .gift-artwork {
+      width: min(82vw, 355px);
+      border-radius: 18px;
+    }
+  
+    .rose {
+      width: clamp(59px, 19vw, 78px);
+    }
+  
+    .gift-teddy {
+      right: 1%;
+      bottom: 0;
+      scale: 0.78;
+      transform-origin: bottom right;
+    }
+  
+    .gift-caption {
+      width: min(84vw, 350px);
+      margin-top: 17px;
+      font-size: 15px;
+    }
+  
+    .finale-continue {
+      margin-top: 16px;
+      padding: 11px 18px;
+      font-size: 12px;
+    }
+    
+  
+    /* ---------------- FINALE ---------------- */
+  
+    #finaleSection,
+    .finale-scene {
+      min-height: 100svh;
+    }
+  
+    .heart-star {
+      font-size: 7px;
+    }
+  
+    .finale-message {
+      top: 48%;
+      width: min(88vw, 390px);
+    }
+  
+    .finale-message > p {
+      margin-bottom: 10px;
+      font-size: 9px;
+      letter-spacing: 4px;
+    }
+  
+    .finale-message h1 {
+      font-size: clamp(37px, 12vw, 52px);
+      line-height: 1.08;
+      letter-spacing: 1px;
+    }
+  
+    .finale-message h2 {
+      margin: 12px 0;
+      font-size: clamp(24px, 8vw, 32px);
+      letter-spacing: 4px;
+    }
+  
+    .finale-line {
+      margin: 17px auto;
+    }
+  
+    .finale-message small {
+      display: block;
+      max-width: 310px;
+      margin-inline: auto;
+      font-size: 12px;
+      line-height: 1.65;
+    }
+  
+    .finale-footer {
+      bottom: max(18px, env(safe-area-inset-bottom));
+      width: 90vw;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+  
+    .sky-lantern {
+      scale: 0.7;
+    }
+  
+    .sky-lantern:nth-child(n + 8) {
+      display: none;
+    }
+  }
+  
+  /* Short phones: tighten vertical rhythm without shrinking tap targets. */
+  @media (max-width: 768px) and (max-height: 700px) {
+    .passcode-card {
+      padding-block: 18px;
+    }
+  
+    .passcode-moon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 8px;
+    }
+  
+    .passcode-hint {
+      margin-bottom: 12px;
+    }
+  
+    #overlay .topText {
+      margin-bottom: 11px;
+    }
+  
+    #overlay h1 {
+      font-size: clamp(45px, 15vw, 63px);
+    }
+  
+    #overlay .line {
+      margin-block: 15px;
+    }
+  
+    #overlay .bottomText {
+      margin-bottom: 23px;
+    }
+  
+    body.cake-moment #cakeInstruction {
+      top: 22px;
+    }
+  
+    body.cake-moment #cakeInstruction p {
+      font-size: clamp(37px, 12vw, 52px);
+    }
+  
+    .gift-scene {
+      gap: 42px;
+      padding-block: 30px;
+    }
+  
+    .gift-box {
+      width: min(58vw, 235px);
+    }
+  }
+  
+  /* Phone landscape mode. */
+  @media (max-width: 900px) and (max-height: 500px) and (orientation: landscape) {
+    #overlay {
+      padding-block: 16px;
+    }
+  
+    #overlay .topText {
+      margin-bottom: 7px;
+      font-size: 12px;
+    }
+  
+    #overlay h1 {
+      font-size: 43px;
+    }
+  
+    #overlay .line {
+      margin-block: 8px;
+    }
+  
+    #overlay .bottomText {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  
+    #beginBtn {
+      width: 250px;
+      min-height: 40px;
+      padding: 9px 15px;
+    }
+  
+    body.cake-moment #cakeInstruction {
+      top: 12px;
+    }
+  
+    body.cake-moment #cakeInstruction p {
+      font-size: 37px;
+    }
+  
+    body.cake-moment #cakeInstruction strong {
+      margin-top: 4px;
+    }
+  
+    body.cake-moment #cakeInstruction span {
+      margin-top: 6px;
+      padding-block: 5px;
+    }
+  
+    .bat-party,
+    .party-globe,
+    .cake-balloons {
+      display: none;
+    }
+  
+    .letter-scene,
+    .gift-scene {
+      min-height: 100svh;
+      padding-block: 18px;
+    }
+  }
+  
+  /* Touch devices should not get stuck in desktop hover states. */
+  @media (hover: none) {
+    #beginBtn:hover,
+    .memories-continue:hover,
+    .letter-yes:hover,
+    .gift-continue:hover,
+    .finale-continue:hover {
+      transform: none;
+    }
+  }
+  
+  /* Respect motion accessibility settings on phones and desktops. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  /* ==================================================
+   COMPACT MOBILE PASSCODE FIX
+================================================== */
+
+@media (max-width: 760px) {
+  .passcode-screen {
+    display: grid;
+    overflow: hidden;
+    padding: 8px;
+  }
+
+  .passcode-layout {
+    display: grid;
+    width: 100%;
+    height: calc(100svh - 16px);
+    min-height: 0;
+    max-height: none;
+    grid-template-rows: 39% 61%;
+    margin: 0;
+    overflow: hidden;
+    border-width: 5px;
+    border-radius: 25px;
+  }
+
+  /* Compact photo area */
+
+  .passcode-photo-side {
+    min-height: 0;
+    justify-content: center;
+    padding: 12px 20px 8px;
+  }
+
+  .passcode-photo-side::before,
+  .passcode-photo-side::after {
+    font-size: 17px;
+  }
+
+  .passcode-photo-kicker {
+    margin-bottom: 2px;
+    font-size: 7px;
+    letter-spacing: 3px;
+  }
+
+  .passcode-photo-side h1 {
+    margin-bottom: 7px;
+    font-size: 39px;
+    line-height: 0.9;
+  }
+
+  .passcode-portrait-frame {
+    width: min(140px, 42vw);
+    max-height: 165px;
+  }
+
+  .passcode-portrait-frame::before {
+    inset: 8px;
+    border-width: 2px;
+    box-shadow:
+      0 0 0 2px #d9658e,
+      inset 0 0 14px rgba(121, 44, 74, 0.12);
+  }
+
+  .passcode-photo-placeholder {
+    inset: 12px;
+  }
+
+  .passcode-photo-placeholder span {
+    font-size: 27px;
+  }
+
+  .passcode-photo-placeholder p {
+    margin-top: 5px;
+    font-size: 7px;
+  }
+
+  .portrait-hearts span {
+    width: 18px;
+    height: 18px;
+    border-width: 1px;
+    font-size: 7px;
+  }
+
+  .passcode-photo-message {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* Compact keypad area */
+
+  .passcode-card {
+    min-height: 0;
+    justify-content: center;
+    overflow: hidden;
+    padding: 13px 20px 15px;
+  }
+
+  .passcode-card::before {
+    inset: 8px;
+    border-radius: 17px;
+  }
+
+  .passcode-kicker {
+    display: none;
+  }
+
+  .passcode-heart {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 4px;
+    border-width: 1px;
+    font-size: 13px;
+  }
+
+  .passcode-card h2 {
+    font-size: 31px;
+    line-height: 0.95;
+  }
+
+  .passcode-hint {
+    margin: 5px 0 9px;
+    font-size: 9px;
+  }
+
+  .passcode-display {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .passcode-display span {
+    width: 37px;
+    height: 39px;
+    border-width: 2px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+
+  .passcode-status {
+    min-height: 13px;
+    margin-bottom: 7px;
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  .passcode-keypad {
+    width: min(220px, 100%);
+    gap: 6px 15px;
+  }
+
+  .passcode-keypad button,
+  .passcode-keypad span {
+    width: 43px;
+    height: 43px;
+    border-width: 2px;
+    font-size: 14px;
+  }
+
+  .passcode-keypad .passcode-clear,
+  .passcode-keypad .keypad-heart {
+    font-size: 13px;
+  }
+}
+
+/* Extra compression for shorter phones */
+
+@media (max-width: 760px) and (max-height: 700px) {
+  .passcode-layout {
+    grid-template-rows: 34% 66%;
+  }
+
+  .passcode-photo-side h1 {
+    font-size: 32px;
+  }
+
+  .passcode-portrait-frame {
+    width: 105px;
+    max-height: 123px;
+  }
+
+  .passcode-photo-message {
+    display: none;
+  }
+
+  .passcode-card {
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+
+  .passcode-heart {
+    width: 27px;
+    height: 27px;
+  }
+
+  .passcode-card h2 {
+    font-size: 27px;
+  }
+
+  .passcode-keypad button,
+  .passcode-keypad span {
+    width: 39px;
+    height: 39px;
+  }
+}
+/* Fix password panel being pushed off-screen */
+
+@media (max-width: 760px) {
+  #loadingScreen.passcode-screen {
+    display: grid;
+    overflow: hidden;
+    padding: 8px;
+  }
+
+  .passcode-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 39% 61%;
+  }
+
+  .passcode-photo-side,
+  .passcode-card {
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    grid-column: 1;
+  }
+
+  .passcode-photo-side {
+    grid-row: 1;
+  }
+
+  .passcode-card {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 760px) and (max-height: 700px) {
+  .passcode-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 34% 66%;
+  }
+}
+/* Show every scrapbook page individually on mobile */
+
+@media (max-width: 760px) {
+  .scrapbook-spread.is-active
+  .scrapbook-page {
+    display: none;
+  }
+
+  .scrapbook-spread.is-active.show-left-page
+  .scrapbook-page--left {
+    display: block;
+  }
+
+  .scrapbook-spread.is-active.show-right-page
+  .scrapbook-page--right {
+    display: block;
+  }
+
+  .scrapbook-spread.is-active.show-left-page
+  .scrapbook-cover-page,
+  .scrapbook-spread.is-active.show-right-page
+  .scrapbook-final-page {
+    display: flex;
+  }
+
+  .scrapbook-book.turning-next
+  .scrapbook-spread.is-active.show-left-page
+  .scrapbook-page--left,
+  .scrapbook-book.turning-next
+  .scrapbook-spread.is-active.show-right-page
+  .scrapbook-page--right {
+    animation: scrapbookMobileNext 0.65s ease both;
+  }
+
+  .scrapbook-book.turning-previous
+  .scrapbook-spread.is-active.show-left-page
+  .scrapbook-page--left,
+  .scrapbook-book.turning-previous
+  .scrapbook-spread.is-active.show-right-page
+  .scrapbook-page--right {
+    animation: scrapbookMobilePrevious 0.65s ease both;
+  }
+}
+
+@keyframes scrapbookMobileNext {
+  from {
+    opacity: 0;
+    transform: perspective(900px) rotateY(-65deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(900px) rotateY(0);
+  }
+}
+
+@keyframes scrapbookMobilePrevious {
+  from {
+    opacity: 0;
+    transform: perspective(900px) rotateY(65deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: perspective(900px) rotateY(0);
+  }
+}
