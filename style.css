@@ -6822,11 +6822,12 @@ body.wish-celebration #space {
 ==================================================== */
 
 .celestial-music-widget {
+  display: none !important;
   position: fixed;
   top: 22px;
   right: 24px;
   z-index: 10000;
-  pointer-events: auto;
+  pointer-events: none;
 }
 
 .music-toggle-btn {

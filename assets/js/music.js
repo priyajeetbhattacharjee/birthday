@@ -10,34 +10,24 @@ class CelestialMusicEngine {
         this.masterGain = null;
         this.isSynth = false;
 
-        this.initDOM();
         this.loadAudioTrack();
+        this.setupAutoplay();
     }
 
-    initDOM() {
-        // Floating music widget
-        const widget = document.createElement("div");
-        widget.id = "celestialMusicWidget";
-        widget.className = "celestial-music-widget";
-        widget.innerHTML = `
-            <button id="musicToggleBtn" type="button" class="music-toggle-btn" aria-label="Toggle background music">
-                <span class="music-disc-icon">
-                    <span class="disc-groove"></span>
-                    <span class="disc-note">🎂</span>
-                </span>
-                <span class="music-waves" aria-hidden="true">
-                    <i></i><i></i><i></i><i></i>
-                </span>
-                <span class="music-label">Happy Birthday ♫</span>
-            </button>
-        `;
-        document.body.appendChild(widget);
+    setupAutoplay() {
+        // Attempt immediate autoplay on load
+        this.play();
 
-        this.widget = widget;
-        this.btn = widget.querySelector("#musicToggleBtn");
+        // Autoplay fallback: start on very first interaction (keypad digit press, click, keydown, touch)
+        const startOnInteraction = () => {
+            this.play();
+            ['click', 'touchstart', 'keydown', 'pointerdown'].forEach((evt) => {
+                window.removeEventListener(evt, startOnInteraction, { capture: true });
+            });
+        };
 
-        this.btn.addEventListener("click", () => {
-            this.toggle();
+        ['click', 'touchstart', 'keydown', 'pointerdown'].forEach((evt) => {
+            window.addEventListener(evt, startOnInteraction, { once: true, capture: true });
         });
     }
 
@@ -51,6 +41,9 @@ class CelestialMusicEngine {
         audio.addEventListener("canplaythrough", () => {
             this.audioElement = audio;
             this.isSynth = false;
+            if (this.isPlaying) {
+                audio.play().catch(() => {});
+            }
         }, { once: true });
 
         audio.addEventListener("error", () => {
@@ -77,18 +70,15 @@ class CelestialMusicEngine {
     play() {
         if (this.isPlaying) return;
         this.isPlaying = true;
-        this.widget.classList.add("is-playing");
 
         if (this.audioElement && !this.isSynth) {
             const playPromise = this.audioElement.play();
             if (playPromise !== undefined) {
-                playPromise.catch((err) => {
-                    console.log("Audio autoplay prevented, falling back to synth:", err.message);
-                    this.initAudioContext();
-                    this.startHbdSynth();
+                playPromise.catch(() => {
+                    this.isPlaying = false;
                 });
             }
-        } else {
+        } else if (this.isSynth) {
             this.initAudioContext();
             this.startHbdSynth();
         }
@@ -96,8 +86,6 @@ class CelestialMusicEngine {
 
     pause() {
         this.isPlaying = false;
-        this.widget.classList.remove("is-playing");
-
         if (this.audioElement) {
             this.audioElement.pause();
         }
