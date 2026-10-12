@@ -176,6 +176,7 @@ export function createStars(scene) {
     const starGroup = new THREE.Group();
     starGroup.add(deepStars);
     starGroup.add(brightStars);
+    scene.add(starGroup);
 
     // Attach animation update function
     starGroup.userData = {

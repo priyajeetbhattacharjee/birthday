@@ -14,18 +14,28 @@ const CAKE_SCALE = 1.35;
 // =====================================
 
 export function createCake(scene) {
-    const loader = new THREE.TextureLoader();
-    const texture = loader.load(cakeImg);
-    texture.colorSpace = THREE.SRGBColorSpace;
-
     const geometry = new THREE.PlaneGeometry(7.5, 7.5);
 
     const material = new THREE.MeshBasicMaterial({
-        map: texture,
         transparent: true,
         depthWrite: false,
         side: THREE.DoubleSide
     });
+
+    const loader = new THREE.TextureLoader();
+    const texture = loader.load(
+        cakeImg,
+        (tex) => {
+            tex.colorSpace = THREE.SRGBColorSpace;
+            tex.needsUpdate = true;
+            material.map = tex;
+            material.needsUpdate = true;
+        },
+        undefined,
+        (err) => console.error("Cake texture error:", err)
+    );
+    texture.colorSpace = THREE.SRGBColorSpace;
+    material.map = texture;
 
     cake = new THREE.Mesh(geometry, material);
     cake.position.set(0, -20, -8);

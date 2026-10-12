@@ -12,8 +12,12 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #000;
+  background: #040108;
   font-family: "Poppins", sans-serif;
+}
+
+body:not(.cake-moment) {
+  background: radial-gradient(ellipse at 50% 45%, #190a32 0%, #080314 55%, #020106 100%);
 }
 
 /* =========================================
