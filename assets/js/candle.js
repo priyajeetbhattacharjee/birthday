@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { cake } from "./cake.js";
+import flameImg from "../images/flames.png";
 
 let flames = [];
 let flameLight = null;
@@ -8,7 +9,7 @@ let candlesBlown = false;
 
 const loader = new THREE.TextureLoader();
 
-const flameTexture = loader.load("/assets/images/flames.png");
+const flameTexture = loader.load(flameImg);
 
 export function createCandles(scene) {
 

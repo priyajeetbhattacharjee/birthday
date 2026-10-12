@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import cakeImg from "../images/cake.png";
 
 export let cake = null;
 export let cakeLight = null;
@@ -14,7 +15,7 @@ const CAKE_SCALE = 1.35;
 
 export function createCake(scene) {
     const loader = new THREE.TextureLoader();
-    const texture = loader.load("/assets/images/cake.png");
+    const texture = loader.load(cakeImg);
     texture.colorSpace = THREE.SRGBColorSpace;
 
     const geometry = new THREE.PlaneGeometry(7.5, 7.5);

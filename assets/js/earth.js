@@ -1,10 +1,11 @@
 import * as THREE from "three";
+import earthImg from "../images/earth.png";
 
 export function createEarth(scene) {
 
     const loader = new THREE.TextureLoader();
 
-    const texture = loader.load("/assets/images/earth.jpg");
+    const texture = loader.load(earthImg);
 
     texture.colorSpace = THREE.SRGBColorSpace;
 

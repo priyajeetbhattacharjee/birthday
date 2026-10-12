@@ -1,4 +1,6 @@
 import * as THREE from "three";
+import milkywayImg from "../images/milkyway.png";
+import nebulaImg from "../images/nebula.png";
 
 export function createGalaxy(scene) {
     const loader = new THREE.TextureLoader();
@@ -6,8 +8,8 @@ export function createGalaxy(scene) {
     // ===========================
     // Load Textures
     // ===========================
-    const milkyTexture = loader.load("/assets/images/milkyway.png");
-    const nebulaTexture = loader.load("/assets/images/nebula.png");
+    const milkyTexture = loader.load(milkywayImg);
+    const nebulaTexture = loader.load(nebulaImg);
 
     milkyTexture.colorSpace = THREE.SRGBColorSpace;
     nebulaTexture.colorSpace = THREE.SRGBColorSpace;
