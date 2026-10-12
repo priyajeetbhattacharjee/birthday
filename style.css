@@ -7156,6 +7156,7 @@ body.wish-celebration #space {
 #overlay h1 {
   background: linear-gradient(135deg, #ffffff 0%, #ffe9a6 40%, #f4d06f 70%, #dfb448 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 0 25px rgba(244, 208, 111, 0.55)) drop-shadow(0 0 60px rgba(123, 44, 191, 0.45));
   letter-spacing: 0.18em;
